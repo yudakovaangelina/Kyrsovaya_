@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/dictionary">
+
+    <fragment
+        android:id="@+id/addNew"
+        android:name="com.mirea.kt.android.kyrsovaya_yudakova.AddNewFragment"
+        android:label="Добавить новый термин"
+        tools:layout="@layout/fragment_add_new" />
+    <fragment
+        android:id="@+id/dictionary"
+        android:name="com.mirea.kt.android.kyrsovaya_yudakova.DictionaryFragment"
+        android:label="Словарь"
+        tools:layout="@layout/fragment_dictionary" />
+    <fragment
+        android:id="@+id/favorites"
+        android:name="com.mirea.kt.android.kyrsovaya_yudakova.FavoritesFragment"
+        android:label="Избранное"
+        tools:layout="@layout/fragment_favorites" />
+    <fragment
+        android:id="@+id/filter"
+        android:name="com.mirea.kt.android.kyrsovaya_yudakova.FilterFragment"
+        android:label="Поиск"
+        tools:layout="@layout/fragment_filter" >
+
+    </fragment>
+</navigation>

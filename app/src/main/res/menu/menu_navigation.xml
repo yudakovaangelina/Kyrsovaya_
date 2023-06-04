@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+
+    <group >
+        <item
+            android:title="Словарь"
+            android:id="@+id/dictionary"
+            />
+        <item
+            android:title="Избранное"
+            android:id="@+id/favorites"
+            />
+        <item
+            android:title="Добавить новый термин"
+            android:id="@+id/addNew"
+            />
+        <item
+            android:title="Поиск"
+            android:id="@+id/filter"
+            />
+    </group>
+</menu>

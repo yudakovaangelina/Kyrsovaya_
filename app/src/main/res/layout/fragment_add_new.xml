@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddNewFragment">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Введите слово и его значение: "
+                android:textSize="24dp"
+                android:layout_marginTop="100dp"/>
+
+            <EditText
+                android:id="@+id/etWord"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="50dp"
+
+                android:hint="Слово"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:textSize="24sp" />
+
+            <EditText
+                android:id="@+id/etDefinition"
+                android:layout_width="match_parent"
+                android:layout_height="51dp"
+                android:layout_marginTop="15dp"
+
+                android:hint="Значение"
+                android:paddingStart="4dp"
+                android:paddingEnd="4dp"
+                android:textSize="24sp" />
+
+
+
+            <Button
+                android:id="@+id/btnAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Добавить"
+                android:backgroundTint="@color/orange"
+                android:layout_gravity="center"
+                android:layout_marginTop="25dp"/>
+
+
+        </LinearLayout>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>
