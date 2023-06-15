@@ -8,7 +8,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="125dp"
         app:cardUseCompatPadding="true"
 
         card_view:cardCornerRadius="1dp"
@@ -38,9 +38,9 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginEnd="106dp"
-                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="34dp"
+                    android:layout_marginEnd="107dp"
+                    android:layout_marginBottom="-15dp"
                     android:foregroundGravity="center_vertical"
                     android:onClick="onFavouriteClick"
 
@@ -52,8 +52,8 @@
                     android:layout_height="35dp"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginEnd="63dp"
-                    android:layout_marginBottom="7dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginBottom="-4dp"
                     card_view:srcCompat="@drawable/baseline_star_border_24" />
 
                 <ImageView
@@ -63,9 +63,9 @@
                     android:layout_alignParentTop="true"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentBottom="true"
-                    android:layout_marginTop="11dp"
-                    android:layout_marginEnd="20dp"
-                    android:layout_marginBottom="7dp"
+                    android:layout_marginTop="33dp"
+                    android:layout_marginEnd="21dp"
+                    android:layout_marginBottom="-15dp"
                     card_view:srcCompat="@drawable/baseline_ios_share_24" />
 
 

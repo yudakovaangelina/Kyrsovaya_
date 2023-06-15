@@ -22,7 +22,7 @@ public class FavoritesFragment extends Fragment {
     private TermAdapter termAdapter;
     private ArrayList<Dictionary> terms = new ArrayList<>();
     private MyAppSQLiteHelper sqLiteHelper;
-    private FavoriteAdapter favoriteAdapter;
+
     private SQLiteDatabase database;
 
 
@@ -37,7 +37,7 @@ public class FavoritesFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View v = inflater.inflate(R.layout.fragment_favorites, container, false);
-        // Получаем ссылки на RecyclerView и его LayoutManager
+
         RecyclerView recyclerView = v.findViewById(R.id.recyclerViewFav);
         termAdapter = new TermAdapter(terms, getActivity());
         LinearLayoutManager layoutManager = new LinearLayoutManager(getActivity());

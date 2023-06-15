@@ -36,7 +36,6 @@ public class DictionaryFragment extends Fragment {
         View v = inflater.inflate(R.layout.fragment_dictionary, container, false);
 
         this.dbManager = new DBManager(new MyAppSQLiteHelper(getActivity(), "my_database.db", null, 1));
-
         RecyclerView rcView =(RecyclerView) v.findViewById(R.id.recyclerView);
         TermAdapter adapter = new TermAdapter(dbManager.loadAllTermsFromDatabase(), this.getActivity());
         Log.i("simple_app_tag", "Получение записей из базы данных");

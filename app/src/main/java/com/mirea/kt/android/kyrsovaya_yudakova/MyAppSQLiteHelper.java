@@ -13,7 +13,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class MyAppSQLiteHelper extends SQLiteOpenHelper {
-    private static MyAppSQLiteHelper instance;
+
 
     public MyAppSQLiteHelper( Context c,  String name, SQLiteDatabase.CursorFactory f, int version) {
         super(c, name, f, version);
@@ -28,12 +28,12 @@ public class MyAppSQLiteHelper extends SQLiteOpenHelper {
         db.execSQL("create table " + "TABLE_DICTIONARY" + "("
                 + "_id integer primary key autoincrement,"
                 + "term String,"
+                + "isFavorite BOOLEAN,"
                 + "definition String" + ");");
 
 
 
-        Log.d("simple_app_tag","Дошло до добавления столбца");
-        db.execSQL("ALTER TABLE " + "TABLE_DICTIONARY" + " ADD COLUMN isFavorite BOOLEAN DEFAULT 0");
+
 
 
 
@@ -44,13 +44,9 @@ public class MyAppSQLiteHelper extends SQLiteOpenHelper {
 
     }
     public void deleteTerm(String term) {
-        // Получаем объект базы данных.
+
         SQLiteDatabase db = this.getWritableDatabase();
-
-        // Удаляем строку с переданным термином.
         db.delete("TABLE_DICTIONARY", "term=?", new String[]{term});
-
-        // Закрываем соединение с базой данных.
         db.close();
     }
 

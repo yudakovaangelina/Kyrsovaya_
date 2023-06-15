@@ -78,7 +78,7 @@ public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder>{
     public void onBindViewHolder(@NonNull TermAdapter.ViewHolder holder, int position) {
         Dictionary term = terms.get(position);
         holder.termView.setText(String.format(term.getTerm()));
-        String selectedTerm = term.getTerm();
+
 
         if(term.isFavourite()){
            holder.favoriteView.setImageResource(R.drawable.baseline_star);
@@ -100,9 +100,9 @@ public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder>{
             @Override
             public void onClick(View v) {
                 MyAppSQLiteHelper sqLiteHelper = new MyAppSQLiteHelper(v.getContext(), "my_database.db", null, 1);
-                sqLiteHelper.deleteTerm(term.getTerm()); // Вызываем метод удаления из базы данных
-                terms.remove(term); // Удаляем элемент из списка
-                notifyItemRemoved(holder.getAdapterPosition()); // Оповещаем адаптер об удалении элемента
+                sqLiteHelper.deleteTerm(term.getTerm());
+                terms.remove(term);
+                notifyItemRemoved(holder.getAdapterPosition());
                 Log.i("simple_app_tag", "Слово удалено!");
                 Toast.makeText(v.getContext(), "Слово удалено!",Toast.LENGTH_LONG).show();
             }
@@ -111,13 +111,12 @@ public class TermAdapter extends RecyclerView.Adapter<TermAdapter.ViewHolder>{
         holder.favoriteView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                // Добавление элемента в избранное
+
 
                 boolean isFavorite = !term.isFavourite();
                 term.setFavourite(isFavorite);
                 notifyItemChanged(holder.getAdapterPosition());
 
-                //Добавляем/удаляем термин из избранного в базе данных
                 SQLiteDatabase db = sqLiteHelper.getWritableDatabase();
                 ContentValues values = new ContentValues();
                 values.put("isFavorite", isFavorite ? 1 : 0);

@@ -17,24 +17,16 @@
 
         <TextView
             android:id="@+id/tvText1"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="42dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:layout_marginTop="150dp"
-            android:text=" Словарь терминов "
+           android:gravity="center"
+            android:text="@string/SlovarTerminov"
             android:textColor="@color/black"
-            android:textSize="28sp" />
+            android:textSize="25sp" />
 
-        <TextView
-            android:id="@+id/tvText2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="0dp"
-            android:layout_marginTop="150dp"
-            android:layout_toRightOf="@id/tvText1"
-            android:text="Java "
-            android:textColor="@color/orange"
-            android:textSize="28sp" />
 
     </RelativeLayout>
 
@@ -47,24 +39,18 @@
 
         <TextView
             android:id="@+id/tvText3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="98dp"
-            android:layout_marginTop="20dp"
-            android:text="Вход в "
-            android:textColor="@color/black"
-            android:textSize="20sp" />
-
-
-        <TextView
-            android:id="@+id/tvText4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="15dp"
-            android:layout_toRightOf="@id/tvText3"
-            android:text="приложение"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="98dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="@string/Java"
             android:textColor="@color/orange"
-            android:textSize="25sp" />
+            android:textSize="40sp" />
+
+
     </RelativeLayout>
 
     <LinearLayout
@@ -77,14 +63,14 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="30dp"
-            android:hint="Логин" />
+            android:hint="@string/Login" />
 
         <EditText
             android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_marginTop="10dp"
-            android:hint="Пароль"
+            android:hint="@string/Parol"
             android:inputType="textPassword" />
 
 
@@ -94,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:backgroundTint="@color/orange"
-            android:text="Войти"
+            android:text="@string/Voity"
             android:textColor="@color/black"
             android:textSize="20sp" />
 

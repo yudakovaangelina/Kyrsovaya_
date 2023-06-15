@@ -67,8 +67,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(binding.getRoot());
         binding.btnEnter.setOnClickListener(this);
 
-        EditText inputPswd = findViewById(R.id.etPassword);
-        inputPswd.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
 
 
 
@@ -81,7 +79,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         EditText inpupLog = findViewById(R.id.etLogin);
         EditText inputPswd = findViewById(R.id.etPassword);
-        inputPswd.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
+
         String login = inpupLog.getText().toString();
         String pswd = inputPswd.getText().toString();
 
@@ -98,7 +96,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         startActivity(actIntent);
 
                     }else if(result == -1) {
-                     
+
                         Toast.makeText(getApplicationContext(), "Неверный пароль или логин", Toast.LENGTH_LONG).show();
                         Log.i("simple_app_tag", "Неверный пароль или логин");
 
@@ -115,9 +113,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         String description1 = sir.getData().get(0).getDescription();
                         String description2 = sir.getData().get(1).getDescription();
                         String description3 = sir.getData().get(2).getDescription();
-
+                        sqLiteHelper = new MyAppSQLiteHelper(getApplicationContext(), "my_database.db", null, 1);
+                        database = sqLiteHelper.getReadableDatabase();
                         Dictionary term = new Dictionary();
-                        SQLiteDatabase db = sqLiteHelper.getWritableDatabase();
+
                         ContentValues cv = new ContentValues();
                         ContentValues cv2 = new ContentValues();
                         ContentValues cv3 = new ContentValues();
@@ -128,11 +127,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         cv3.put("term", value3);
                         cv3.put("definition", description3);
 
-                        long rowId = db.insert("TABLE_DICTIONARY", null, cv);
-                        long rowId1 = db.insert("TABLE_DICTIONARY", null, cv2);
-                        long rowId2 = db.insert("TABLE_DICTIONARY", null, cv3);
+                        database.insert("TABLE_DICTIONARY", null, cv);
+                        database.insert("TABLE_DICTIONARY", null, cv2);
+                        database.insert("TABLE_DICTIONARY", null, cv3);
                         cv.clear();
-                        db.close();
+                        database.close();
                         Log.i("simple_app_tag", "Загрузка с сервера");
                         sharedPreferences.edit().putBoolean(IS_FIRST_LAUNCH, false).apply();
 

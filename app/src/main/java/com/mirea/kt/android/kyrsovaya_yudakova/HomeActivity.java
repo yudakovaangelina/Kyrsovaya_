@@ -55,7 +55,7 @@ public class HomeActivity extends AppCompatActivity {
         DrawerLayout drawer = binding.drawerLayout;
 
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.dictionary, R.id.favorites, R.id.addNew)
+                R.id.dictionary, R.id.favorites, R.id.addNew, R.id.filter)
                 .setOpenableLayout(drawer)
                 .build();
         NavController navController = Navigation.findNavController(this, R.id.fragmentContainerView);

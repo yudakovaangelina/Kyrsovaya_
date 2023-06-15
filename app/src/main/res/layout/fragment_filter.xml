@@ -13,7 +13,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Введите слово, которое хотите найти: "
+            android:text="@string/FindWord"
             android:textSize="24dp"
             android:layout_marginTop="100dp"/>
 
@@ -23,7 +23,7 @@
             android:layout_height="48dp"
             android:layout_marginTop="180dp"
 
-            android:hint="Слово"
+            android:hint="@string/Slovo"
             android:paddingStart="4dp"
             android:paddingEnd="4dp"
             android:textSize="24sp" />
@@ -31,10 +31,12 @@
             android:id="@+id/btnFilter"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Найти"
+            android:text="@string/Find"
             android:backgroundTint="@color/orange"
             android:layout_gravity="center"
-            android:layout_marginTop="230dp"/>
+            android:layout_marginTop="230dp"
+            android:textColor="@color/black"
+            android:textSize="20dp"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recFilter"

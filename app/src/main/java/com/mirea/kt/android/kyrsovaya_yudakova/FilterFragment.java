@@ -67,7 +67,7 @@ public class FilterFragment extends Fragment {
                 Cursor cursor = database.rawQuery("SELECT * FROM TABLE_DICTIONARY WHERE term LIKE '%" + searchString + "%';", null);
                 filerTerms.clear();
                 while (cursor.moveToNext()) {
-                    int id = cursor.getInt(0);
+
                     String term = cursor.getString(1);
                     String definition = cursor.getString(2);
                     boolean isFavorite = cursor.getInt(3) == 1;

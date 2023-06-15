@@ -35,7 +35,7 @@ public class DBManager {
         long rowId = db.insert("TABLE_DICTIONARY", null, cv);
         cv.clear();
         db.close();
-        Log.i("simple_app_tag", "save phone to database");
+        Log.i("simple_app_tag", "save term to database");
         return rowId !=1;
     }
 

@@ -20,7 +20,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Введите слово и его значение: "
+                android:text="@string/EnterWord"
                 android:textSize="24dp"
                 android:layout_marginTop="100dp"/>
 
@@ -30,7 +30,7 @@
                 android:layout_height="48dp"
                 android:layout_marginTop="50dp"
 
-                android:hint="Слово"
+                android:hint="@string/Slovo"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
                 android:textSize="24sp" />
@@ -41,7 +41,7 @@
                 android:layout_height="51dp"
                 android:layout_marginTop="15dp"
 
-                android:hint="Значение"
+                android:hint="@string/Def"
                 android:paddingStart="4dp"
                 android:paddingEnd="4dp"
                 android:textSize="24sp" />
@@ -52,10 +52,12 @@
                 android:id="@+id/btnAdd"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Добавить"
+                android:text="@string/Add"
                 android:backgroundTint="@color/orange"
                 android:layout_gravity="center"
-                android:layout_marginTop="25dp"/>
+                android:layout_marginTop="25dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
 
 
         </LinearLayout>
